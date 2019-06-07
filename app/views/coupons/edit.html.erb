@@ -1,0 +1,17 @@
+<h1>Edit Coupon</h1>
+
+<h3>Code: <%= @coupon.coupon_code %></h3> <br><br>
+<h4>Store: <%= @coupon.store %></h4>
+
+<p>If you want to change your details, add in new information below:</p>
+
+<%= form_for @coupon do |f| %>
+   <%= f.label :coupon_code %>
+   <%= f.text_field :coupon_code %>
+   <%= f.label :store %>
+   <%= f.text_field :store %>
+   <%= f.submit "Submit Changes" %>
+<%end%>
+
+<p>If you would like to remove this coupon, click the buttons below.</p>
+<%= button_to 'delete', @coupon, :method => :delete %>
