@@ -1,0 +1,7 @@
+<h1><%=@coupon.coupon_code%></h1>
+
+<h1><%= @coupon.store %></h1>
+
+<p>If you would like to edit this coupon, click the link below.</p>
+
+<%= link_to 'Edit', edit_coupon_path(@coupon) %>
